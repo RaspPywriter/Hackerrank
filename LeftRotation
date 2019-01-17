@@ -1,0 +1,5 @@
+def rotLeft(a, d):
+#copy original list
+    original = list(a)
+    result = original[d:]+original[:d]
+    return result
