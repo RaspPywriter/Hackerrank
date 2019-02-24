@@ -1,8 +1,9 @@
+#Return all columns for US cities with a population greater than 100000
 SELECT * 
 FROM City
 WHERE population > 100000 AND CountryCode = 'USA';
 
-
+#Return name for all US cities with a population over 120000
 SELECT Name
 FROM City
 WHERE CountryCode = 'USA' AND Population > 120000;
@@ -10,3 +11,13 @@ WHERE CountryCode = 'USA' AND Population > 120000;
 #Return all columns from the city table
 SELECT *
 FROM CITY;
+
+#Return all columns where ID=1661
+SELECT *
+FROM CITY
+WHERE ID = 1661;
+
+#Return all unique cities from station for all even IDs
+SELECT DISTINCT CITY
+FROM STATION
+WHERE MOD(ID,2)=0;
