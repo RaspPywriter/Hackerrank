@@ -30,3 +30,8 @@ FROM STATION;
 SELECT *
 FROM CITY
 WHERE CountryCode = 'JPN';
+
+#Return names of Japanese cities from City table
+SELECT Name
+FROM CITY
+WHERE CountryCode = 'JPN';
