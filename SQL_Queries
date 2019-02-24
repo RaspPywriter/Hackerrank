@@ -1,0 +1,8 @@
+SELECT * 
+FROM City
+WHERE population > 100000 AND CountryCode = 'USA';
+
+
+SELECT Name
+FROM City
+WHERE CountryCode = 'USA' AND Population > 120000;
