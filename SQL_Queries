@@ -21,3 +21,12 @@ WHERE ID = 1661;
 SELECT DISTINCT CITY
 FROM STATION
 WHERE MOD(ID,2)=0;
+
+#Return city and state from Station table
+SELECT CITY, STATE
+FROM STATION;
+
+#Return all columns for Japanese Cities from City table
+SELECT *
+FROM CITY
+WHERE CountryCode = 'JPN';
