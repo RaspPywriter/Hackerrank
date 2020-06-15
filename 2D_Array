@@ -10,6 +10,7 @@ import sys
 def hourglassSum(arr):
     row = len(arr)
     column = len(arr[0])
+    #set maxVal to something so small that values given have to be larger
     maxVal = -9999999999999
     miniSum=0
     t = 0
