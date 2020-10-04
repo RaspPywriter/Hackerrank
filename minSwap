@@ -1,0 +1,36 @@
+# I started by using selection sort, it passed 8 of the tests, however it timed out, so I then rewrote it below:
+def minimumSwaps(arr):
+# go through all elements in arr array 
+# count variable to track the swaps
+count = 0
+for i in range(len(arr)): 
+#set min value to i
+minVal = i 
+        for j in range(i+1, len(arr)): 
+            if arr[minVal] > arr[j]: 
+                
+                minVal = j 
+                print('minval is ' + str(minVal))
+    # Swap the minimum with the first value       
+        arr[i], arr[minVal] = arr[minVal], arr[i] 
+        print('swap details '+str(arr[i]))
+        print('arr minVal ' +str(arr[minVal]))
+        print(count)
+        if arr[i] != arr[minVal]:
+            count +=1
+            
+#try 2 - create a second array that is sorted, then compare the sorted array by position to the original array. 
+    sortArr = sorted(arr)
+    ind = {v: i for i,v in enumerate(arr)}
+    count = 0
+    
+    for i,v in enumerate(arr):
+        right = sortArr [i]
+        if v != right:
+            swap_ind = ind [right]
+            arr[swap_ind],arr[i] = arr[i], arr[swap_ind]
+            ind[v] = swap_ind
+            ind [right] = i
+            count += 1
+            
+    return count
