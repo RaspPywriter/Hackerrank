@@ -25,16 +25,15 @@ def hourglassSum(arr):
     
    
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    arr = []
 
-    for _ in range(6):
-        arr.append(list(map(int, input().rstrip().split())))
+   arr = []
 
-    result = hourglassSum(arr)
+   for _ in range(6):
+       arr.append(list(map(int, input().rstrip().split())))
 
-    fptr.write(str(result) + '\n')
+   result = hourglassSum(arr)
 
-    fptr.close()
+   fptr.write(str(result) + '\n')
+
+   fptr.close()
